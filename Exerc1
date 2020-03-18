@@ -1,0 +1,16 @@
+//Exercício 1//
+
+//Descrição de Automóvel//
+
+O automóvel, é uma meio de transporte usado para levar pessoas, mercadorias, móveis e mais, de um lugar a outro.
+  O carro é um exemplo de automóvel e para seu funcionamento correto é necessário primeiramente de um motorista
+seguido de suas peças principais como motor, embreagem, eixo e freios. E com isso algumas funções do automóvel
+são compreendidas, como a partida, momento que acionamos a ignição sem existência de aceleração, logo após temos a aceleração onde o automóvel muda sua velocidade podendo aumenta-lá ou diminui-lá e por fim temos o desligamento do automóvel, momento em que este se encontra imóvel e com o inativo.
+
+//Objetos//
+
+Motorista -> Responsável por acionar os elementos do automóvel e determinar quando cada um será acionado;
+Motor -> Elemento que exercer a força necessária para que o carro se locomova;
+Embreagem -> Peça que comanda aforça das rotações do motor que passaram para as rodas, conforme seu módulo; 
+Eixos -> Possui a função de guiar a força que recebe e passa-lá as rodas;
+Freios -> Acionado quando é necessário a desaceleração do veículo, diminuindo sua velocidade.
