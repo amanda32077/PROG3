@@ -1,0 +1,72 @@
+//Exercicio 2//
+<?php
+
+class Empregado{
+
+    public $nome;
+    public $sobrenome;
+    public $salario;
+    public $novo_salario;
+    public $acrescimo;
+
+    public function setNome($nome){
+      $this->nome=$nome;
+    }
+    public function setSobrenome($sobrenome){
+      $this->sobrenome=$sobrenome;
+    }
+    public function setSalario($salario){
+      $this->salario=$salario;
+    }
+    public function setNovo_salario($salario){
+      $this->acrescimo=($this->salario*10)/100;
+      $this->novo_salario=$this->salario+$this->acrescimo;
+
+    }
+
+    public function getNome(){
+      return $this->nome;
+    }
+    public function getSobrenome(){
+      return $this->sobrenome;
+    }
+    public function getSalario(){
+      return $this->salario;
+    }
+    public function getNovo_salario(){
+      return $this->novo_salario;
+    }
+
+}
+
+//Primeiro//
+$primeiro = new Empregado;
+
+$primeiro ->setNome("Amanda");
+$primeiro ->setSobrenome("Marques");
+$primeiro ->setSalario("12.000");
+$primeiro ->setNovo_salario("12.000");
+
+echo '<br>';
+echo '<br>';
+echo $primeiro ->getNome()." " .$primeiro ->getSobrenome(). " possui o salário de ".$primeiro ->getSalario();
+echo '<br>';
+echo "Com o aumento de 10% ". $primeiro ->getNome()." " .$primeiro ->getSobrenome()." ganhará ". $primeiro->getNovo_salario();
+echo '<br>';
+echo '<br>';
+
+
+//Segundo//
+$segundo = new Empregado;
+$segundo ->setNome("Jacques");
+$segundo ->setSobrenome("Valente");
+$segundo ->setSalario("21.000");
+$segundo ->setNovo_salario("21.000");
+
+echo $segundo ->getNome()." " .$segundo ->getSobrenome(). " possui o salário de ".$segundo ->getSalario();
+echo '<br>';
+echo "Com o aumento de 10% ". $segundo ->getNome()." " .$segundo ->getSobrenome()." ganhará ". $segundo->getNovo_salario();
+echo '<br>';
+
+
+?>
