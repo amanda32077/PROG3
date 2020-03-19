@@ -1,0 +1,99 @@
+//Exercio 3//
+
+<?php
+
+class Produto{
+
+  public $nome;
+  public $preco;
+  public $quant;
+  public $desconto;
+  public $novo_preco;
+
+  public function setNome($nome){
+    $this->nome=$nome;
+  }
+  public function setPreco($preco){
+    $this->preco=$preco;
+  }
+  public function setQuant($quant){
+    $this->quant=$quant;
+  }
+  public function setNovo_preco($preco,$quant){
+    if ($this->quant>10) {
+      $this->desconto=($this->preco*10)/100;
+    }if ($this->quant>20) {
+      $this->desconto=($this->preco*20)/100;
+    }if ($this->quant>50) {
+      $this->desconto=($this->preco*25)/100;
+    }
+
+    $this->novo_preco=$this->preco-$this->desconto;
+  }
+
+  public function getNome(){
+    return $this->nome;
+  }
+  public function getPreco(){
+    return $this->preco;
+  }
+  public function getQuant(){
+    return $this->quant;
+  }
+  public function getNovo_preco(){
+    return $this->novo_preco;
+  }
+
+}
+
+$primeiro = New Produto;
+
+$primeiro ->setNome("Shampoo");
+$primeiro ->setPreco("10.00");
+$primeiro ->setQuant("2");
+
+echo'<br>';
+echo'<br>';
+echo $primeiro->getNome(). " com ". $primeiro->getQuant() . " unidades fica ao valor de ". $primeiro->getPreco(). " com esta quantidade não há desconto";
+
+
+
+$segundo = New Produto;
+
+$segundo ->setNome("Shampoo");
+$segundo ->setPreco("75.00");
+$segundo ->setQuant("15");
+$segundo ->setNovo_preco("75.00","15");
+
+echo'<br>';
+echo'<br>';
+echo $segundo->getNome(). " com ". $segundo->getQuant() . " unidades fica ao valor de ". $segundo->getPreco(). " com esta quantidade há desconto de 10%, ficando no valor de ". $segundo->getNovo_preco();
+
+
+
+$terceiro = New Produto;
+
+$terceiro ->setNome("Shampoo");
+$terceiro ->setPreco("200.00");
+$terceiro ->setQuant("40");
+$terceiro ->setNovo_preco("200.00","40");
+
+
+echo'<br>';
+echo'<br>';
+echo $terceiro->getNome(). " com ". $terceiro->getQuant() . " unidades fica ao valor de ". $terceiro->getPreco(). " com esta quantidade há desconto de 20%, ficando no valor de ". $terceiro->getNovo_preco();
+
+
+
+$quarto = New Produto;
+
+$quarto ->setNome("Shampoo");
+$quarto ->setPreco("500.00");
+$quarto ->setQuant("100");
+$quarto ->setNovo_preco("500.00","100");
+
+echo'<br>';
+echo'<br>';
+echo $quarto->getNome(). " com ". $quarto->getQuant() . " unidades fica ao valor de ". $quarto->getPreco(). " com esta quantidade há desconto de 25%, ficando no valor de ". $quarto->getNovo_preco();
+
+?>
